@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page</title>
     <style>
-        .body{
-            padding: 20px;
-        }
         .navbar {
-          background-color: #f3d9fd;
+          background-color: #f8f8f8;
           height: 50px;
             display: flex;
             align-items: center;
             padding: 0 20px;
             
           }
-          
+          .mainbody{
+            background-color: #a1f3c6;
+            padding-left: 200px;
+            padding-right: 200px;
+          }
           .logo {
             width: 40px;
             height: 40px;
@@ -27,7 +28,7 @@
             font-weight: bold;
             padding-left: 5px;
             text-decoration: none;
-            color: rgba(132, 132, 255, 0.904);
+            color: rgb(38, 23, 168);
           }
           .brand:hover{
             color: rgb(23, 168, 45);
@@ -40,19 +41,14 @@
             width: 40px;
             height: 40px;
           }
-          .slogan {
-            font-size: 24px;
-            font-weight: bold;
-            padding-top: 50px;
-            padding-bottom: 5px;
-          }
-          h1, .slogan{
-            text-align: center;
-            color: rgb(23, 168, 45);
+          h1{
+            text-align: left;
+            color: rgb(38, 23, 168);
+            padding-top: 40px;
           }
           .product-list {
             display: grid;
-            grid-template-columns: repeat(4, 2fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 100px 15px;
             margin-left: 200px;
             padding-top: 20px;
@@ -61,16 +57,20 @@
           .product-item {
             width: 200px;
             height: 200px;
-            background-color: #f3d9fd;
+            background-color: #f8f8f8;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
           }
           .upper{
-            background-color: #f3d9fd;
             margin-left: 200px;
-            margin-right: 213px;
+            text-align: left;
+          }
+          .cart{
+            text-decoration: none;
+            color: rgb(38, 23, 168);
+            font-weight: bold;
           }
           @media screen and (max-width:480px) {
             .product-list {
@@ -94,12 +94,13 @@
         <a href="index.html">
         <img src="zilaislogo.png" alt="Logo" class="logo">
         </a>
-        <a href="index.html" class="brand">Dragon's Den</a>
+        <a href="index.html" class="brand">Veloce<br>Coffee shop</a>
         <a href="basket.html" class="icon">&#128722;</a>
+        <a href="basket.html" class="cart">Shopping<br>cart</a>
     </nav>
+    <div class="mainbody">
         <div class="upper">
-        <h1>Welcome to Dragon's Den</h1>
-        <p class="slogan">Unleash Your Thirst for Adventure!</p>
+        <h1>We believe a cup of coffee is one<br> of the most important, simple<br> <span style="color: rgb(255, 115, 0);">pleasures</span> in life</h1>
         </div>
         <div class="product-list">
             <div class="product-item">
@@ -143,5 +144,6 @@
                 <p>$29.99</p>
               </div>
           </div>
+    </div>
 </body>
 </html>
