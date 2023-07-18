@@ -5,40 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page</title>
     <style>
-        body{
-            margin-left: 100px;
-            margin-right: 100px;
-            background-color: bisque;
+        .body{
+            padding: 20px;
         }
-        h1{
+        .navbar {
+          background-color: #f3d9fd;
+          height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            
+          }
+          
+          .logo {
+            width: 40px;
+            height: 40px;
+          }
+          
+          .brand {
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 5px;
+            text-decoration: none;
+            color: rgba(132, 132, 255, 0.904);
+          }
+          .brand:hover{
+            color: rgb(23, 168, 45);
+          }
+          
+          .icon {
+            font-size: 24px;
+            margin-left: auto;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+          }
+          .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 50px;
+            padding-bottom: 5px;
+          }
+          h1, .slogan{
             text-align: center;
-            font-size: 36px;
-            font:small-caps
-        }
-        p{
-            text-align: left;
-            border-style: double;
-            border-color: brown;
-            border-width: 3px;
-            padding: 10px;
-        }
+            color: rgb(23, 168, 45);
+          }
+          .product-list {
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            grid-gap: 100px 15px;
+            margin-left: 200px;
+            padding-top: 20px;
+          }
+          
+          .product-item {
+            width: 200px;
+            height: 200px;
+            background-color: #f3d9fd;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .upper{
+            background-color: #f3d9fd;
+            margin-left: 200px;
+            margin-right: 213px;
+          }
+          @media screen and (max-width:480px) {
+            .product-list {
+                grid-template-columns: 1fr;
+                margin-left: 60px;
+              }
+              
+              .product-item {
+                width: 80%;
+                height: auto;
+              }
+              .upper{
+                margin-left: 0px;
+                margin-right: 0px;
+              }
+          }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Blog</h1>
-    </header>
-    <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit dolores quasi reprehenderit vitae, ratione iure minima voluptate repellat magnam ut, adipisci voluptatem, sunt alias! Consequatur laudantium minima necessitatibus totam facilis.
-        Adipisci natus sint rem, omnis, amet deleniti mollitia voluptates tempora inventore at qui numquam aliquam ad saepe rerum dolorem recusandae magnam. Beatae praesentium qui numquam illo natus tempore rem. Nostrum!
-        Atque temporibus vitae tempore error, quo ipsum deserunt consequuntur mollitia quod nisi. Doloribus dolores eum sint! Incidunt nemo illo laboriosam ut eos tempore maxime delectus quis. Porro eius veniam sed.
-        Quis vel fuga expedita optio provident dolorum ipsum nesciunt neque alias. Dolor, nostrum? Consequuntur esse quam molestiae laudantium officiis amet, tempora, aut eveniet repellat, neque quaerat iure sunt hic odit?
-        Dolorem distinctio quos, rerum officia voluptates maiores praesentium illum, debitis ad ab quo aliquam quasi corrupti consectetur sequi velit sit neque consequatur dolore! Sint ipsam incidunt delectus earum facilis voluptates.
-        Sit, repellendus consectetur. Fugit soluta iusto eaque facilis perspiciatis! Aut quibusdam dolore, sint velit commodi expedita nobis culpa atque officiis magni perspiciatis quidem similique, enim excepturi, molestias sunt. Voluptate, molestiae?
-        Alias consequatur aspernatur eius voluptas et a, error natus? Est, voluptatum consectetur voluptatem quis corrupti ea enim eum, quam vero consequuntur harum? Eveniet enim id atque, sunt totam placeat et.
-        Quas, voluptatibus consectetur. Autem odio omnis at reiciendis illum veritatis unde officiis eos pariatur incidunt nihil nisi quae architecto, obcaecati voluptas, earum dolorum cum minima enim debitis error quis. Vero.
-        Aperiam cum saepe, vel quisquam aliquam dignissimos nisi nihil odio, itaque, maxime nam. Ducimus earum illo consequuntur reiciendis nulla dignissimos, accusantium veniam fuga natus. Quas, dolorum. Doloremque magnam aliquid quos.
-        Quos esse, necessitatibus exercitationem asperiores maxime ad iste ex, nesciunt aperiam quibusdam similique numquam, possimus cumque. Mollitia, ratione quidem vitae, optio error deleniti sunt eveniet culpa asperiores quas unde in?
-    </p>
+    <nav class="navbar">
+        <a href="index.html">
+        <img src="zilaislogo.png" alt="Logo" class="logo">
+        </a>
+        <a href="index.html" class="brand">Dragon's Den</a>
+        <a href="basket.html" class="icon">&#128722;</a>
+    </nav>
+        <div class="upper">
+        <h1>Welcome to Dragon's Den</h1>
+        <p class="slogan">Unleash Your Thirst for Adventure!</p>
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+              <img src="product1.jpg" alt="Product 1">
+              <h3>Product 1</h3>
+              <p>$9.99</p>
+            </div>
+            <div class="product-item">
+              <img src="product2.jpg" alt="Product 2">
+              <h3>Product 2</h3>
+              <p>$14.99</p>
+            </div>
+            <div class="product-item">
+              <img src="product3.jpg" alt="Product 3">
+              <h3>Product 3</h3>
+              <p>$19.99</p>
+            </div>
+            <div class="product-item">
+              <img src="product4.jpg" alt="Product 4">
+              <h3>Product 4</h3>
+              <p>$24.99</p>
+            </div>
+            <div class="product-item">
+              <img src="product5.jpg" alt="Product 5">
+              <h3>Product 5</h3>
+              <p>$29.99</p>
+            </div>
+            <div class="product-item">
+                <img src="product6.jpg" alt="Product 6">
+                <h3>Product 6</h3>
+                <p>$29.99</p>
+              </div>
+              <div class="product-item">
+                <img src="product7.jpg" alt="Product 7">
+                <h3>Product 7</h3>
+                <p>$29.99</p>
+              </div>
+              <div class="product-item">
+                <img src="product8.jpg" alt="Product 8">
+                <h3>Product 8</h3>
+                <p>$29.99</p>
+              </div>
+          </div>
 </body>
 </html>
