@@ -130,6 +130,34 @@
     }
 
 
+  input[type="radio"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #f8f8f8;
+    background-color: #f8f8f8;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  input[type="radio"]:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background-color: #FFBD5C; 
+    transition: left 0.3s ease-in-out; 
+  }
+  input[type="radio"]:checked:after {
+    left: 0; 
+  }
+
 
 
 
