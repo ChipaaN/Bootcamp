@@ -101,20 +101,85 @@
     text-transform: uppercase;
     font-size: 20px;
    }
+   .pill-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-style: double;
+    border-color: #FFBD5C;
+    border-radius: 25px;
+    background-color: #FEF2E8;
+    color: #023A6B;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .pill-button:hover {
+    transition: 400ms;
+    background-color: #FFBD5C
+  }
+  
+  .pill-button:focus {
+    outline: none;
+  }
+  .addtocart{
+    text-align: left;
+    padding-top: 10px;
+    }
+
+
+
+
+
+
     @media screen and (max-width:480px) {
       .product-list {
           grid-template-columns: 1fr;
         }
-        
         .product-item {
           flex-basis: 100%;
+        }
+        .navbar{
+          padding-bottom: 20px;
         }
         .upper{
           margin-left: 0px;
           margin-right: 0px;
         }
+        .upper h1{
+          font-size: 30px;
+        }
         .mainbody{
           padding-left: 30px;
-          padding-right: 30px;
+          padding-right: 70px;
+          margin-left: -20px;
+        }
+        .brand{
+          width: 60%;
+        }
+        .cart{
+          width: 50%;
+          margin-left: -80px;
+          margin-right: -80px;
+        }
+        .icon{
+          width: 50%;
+          margin-right: -20px;
+        }
+        .logo{
+          width: 20%;
+          height: 20%;
+          margin-left: -10px;
+        }
+        .container h3{
+          font-size: 30px;
+        }
+        .container{
+          padding-bottom: 30px;
+        }
+        .product-item img{
+          height: 100%;
         }
     }
