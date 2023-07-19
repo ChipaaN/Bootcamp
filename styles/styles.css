@@ -1,8 +1,9 @@
 .navbar {
     height: 50px;
       display: flex;
-      align-items: center;
+      align-items: end;
       padding: 0 20px;
+      margin-bottom: -25px;
       
     }
     .mainbody{
@@ -15,24 +16,14 @@
       width: 40px;
       height: 40px;
     }
-    
-    .brand {
-      font-size: 18px;
-      font-weight: bold;
-      padding-left: 5px;
-      text-decoration: none;
-      color: #023A6B;
-    }
-    .brand:hover{
-      color: rgb(23, 168, 45);
-    }
-    
+  
     .icon {
       font-size: 24px;
       margin-left: auto;
       text-decoration: none;
       width: 40px;
       height: 40px;
+      margin-right: 20px;
     }
     h1{
       text-align: left;
@@ -50,43 +41,66 @@
     }
     .product-item {
       flex-basis: calc(33.33% - 20px);
-      height: 300px;
-      background-color: #f8f8f8;
       text-align: center;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
     .upper{
       text-align: left;
+      line-height: 1.2;
     }
     .cart{
       text-decoration: none;
       color: #023A6B;
       font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
     }
     .product-item img{
-      max-width: 100%;
+      max-width: 80%;
       max-height: 65%;
     }
-    .radio-group {
-      display: flex;
-      gap: 40px;
-    }
-    
-    .radio-group label {
-      display: flex;
-      align-items: center;
-    }
-    .sugar{
-      margin-top: 15px;
-      display: flex;
+    .product-item h3{
       text-align: left;
-    }
-    .sugar label{
+      font-size: 45px;
+      color: #023A6B;
       display: flex;
-      gap: 30px;
+      margin-right: 10px;
+      font-family: 'Eczar', serif;
     }
+   .price{
+    height: 20px;
+    width: 50px;
+    display: flex;
+    padding-bottom: 15px;
+   }
+   .container{
+    display: flex;
+    align-items: center;
+   }
+   .amount{
+    text-align: left;
+    font-size: 20px;
+    color: #023A6B;
+    margin-top: -60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+   }
+   .close{
+      margin-right: 50px;
+   }
+   .sugar{
+    text-align: left;
+    color: #023A6B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+   }
     @media screen and (max-width:480px) {
       .product-list {
           grid-template-columns: 1fr;
