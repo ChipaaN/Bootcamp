@@ -8,8 +8,8 @@
     }
     .mainbody{
       background: #FEF2E8;
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 300px;
+      padding-right: 300px;
       padding-bottom: 100px;
     }
     .logo {
@@ -40,12 +40,29 @@
       gap: 80px 20px;
     }
     .product-item {
-      flex-basis: calc(33.33% - 20px);
-      text-align: center;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      position: relative;
+      width: 33.33%;
+      min-width: 300px;
+      margin-bottom: 64px;
+    }
+    .product-item > section:not(:last-child){
+      margin-bottom: 16px;
+    }
+    .product__stamp{
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      right: 30%;
+      top: 100px;
+      animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
     .upper{
       text-align: left;
@@ -58,26 +75,30 @@
       font-family: 'Open Sans', sans-serif;
     }
     .product-item img{
-      max-width: 80%;
-      max-height: 65%;
+      width: 264px;
+      height: 220px;
     }
     .product-item h3{
       text-align: left;
-      font-size: 45px;
+      font-size: 40px;
       color: #023A6B;
       display: flex;
       margin-right: 10px;
       font-family: 'Eczar', serif;
     }
    .price{
+    font-family: 'Eczar', serif;
+    background: darkorange;
+    color: white;
+    border-radius: 16px;
+    padding: 0 8px;
     height: 20px;
-    width: 50px;
-    display: flex;
-    padding-bottom: 15px;
+    line-height: 20px;
    }
    .container{
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
    }
    .amount{
     text-align: left;
@@ -89,9 +110,87 @@
     text-transform: uppercase;
     padding-top: 10px;
    }
-   .close{
-      margin-right: 50px;
+  
+   .button{
+    padding: 16px 24px;
+    border: 2px solid yellow;
+    border-radius: 64px;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: inherit;
+    transition: all .2s;
    }
+
+   .button:hover{
+    background: yellow;
+   }
+
+   input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border: 6px solid white;
+    border-radius: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   input[type="radio"]::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: darkorange;
+    margin-top: 3px;
+    margin-bottom: 3px;
+   }
+
+   input[type="radio"]:checked:before{
+    transform: scale(1);
+   }
+
+   
+   input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    margin-left: -1px;
+
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-color: white;
+    vertical-align: middle;
+   }
+
+   input[type="checkbox"]:checked {
+    background-color: yellow;
+   }
+
+   input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+   }
+
+
+
+
+
    .sugar{
     text-align: left;
     color: #023A6B;
@@ -115,7 +214,7 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   .pill-button:hover {
     transition: 400ms;
     background-color: #FFBD5C
@@ -127,37 +226,29 @@
   .addtocart{
     text-align: left;
     padding-top: 10px;
+    display: flex;
     }
 
+    .info {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../pictures/Info.png");
+      background-size: cover;
+      cursor: pointer;
+      transition: all .2s;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
 
-  input[type="radio"] {
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 1px solid #f8f8f8;
-    background-color: #f8f8f8;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  input[type="radio"]:after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 100%; 
-    background-color: #FFBD5C; 
-    transition: left 0.3s ease-in-out; 
-  }
-  input[type="radio"]:checked:after {
-    left: 0; 
-  }
+    .info:hover {
+      width: 24px;
+      height: 24px;
+      margin-top: 13px;
+      margin-left: 13px;
+    }
 
+  
 
 
 
