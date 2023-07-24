@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div>
+  <a href="index.html">
+  <img src="pictures/Grain.png" alt="Logo" class="logo">
+  <img src="pictures/brand.png" alt="Logo" class="brand">
+  </a>
+  </div>
+  <a href="basket.html" class="icon">
+    <img src="/pictures/Shopping_Cart.png">
+  </a>
+  <a href="basket.html" class="cart">Shopping<br>cart</a>
+</nav>
+<div class="mainbody">
+  <div class="upper">
+  <h1>We believe a cup of coffee is one<br> of the most important, simple<br> <span style="color: #FF7733;">pleasures</span> in life</h1>
+  </div>
+  <div class="product-list">
+      <div class="product-item" *ngFor="let item of products">
+        <img src={{item.imgUrl}} alt="Product 1">
+        <img class="product__stamp" src="/pictures/Stamp.svg" alt="stamp">
+        <section class="container">
+        <h3>{{item.name}}</h3>
+        <span class="price">${{item.price}}</span>
+        </section>
+
+        <section class="amount">
+          <input type="radio" name="coffee-size" value="250" checked/>
+          <label>250ML</label>
+
+          <input type="radio" name="coffee-size" value="500"/>
+          <label>500ML</label>
+        </section>
+
+          <section class="sugar">
+            <input type="checkbox" name="coffee-sugar"/>
+            <label>ADD SUGAR</label>
+          </section>
+
+          <section class="addtocart">
+            <button class="pill-button" onclick="addProduct()">Add to Cart</button>
+            <span class="info"></span>
+          </section>
+      </div>
+      
+    </div>
+</div>

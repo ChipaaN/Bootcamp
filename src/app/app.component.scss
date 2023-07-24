@@ -1,0 +1,304 @@
+.navbar {
+    height: 50px;
+      display: flex;
+      align-items: end;
+      padding: 0 20px;
+      margin-bottom: -25px;
+      
+    }
+    .mainbody{
+      background: #FEF2E8;
+      padding-left: 300px;
+      padding-right: 300px;
+      padding-bottom: 100px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .icon {
+      font-size: 24px;
+      margin-left: auto;
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+    h1{
+      text-align: left;
+      font-size: 58px;
+      color: #023A6B;
+      font-family: 'Eczar', serif;
+      padding-top: 40px;
+      padding-bottom: 15px;
+    }
+    .product-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 80px 20px;
+    }
+    .product-item {
+      position: relative;
+      width: 33.33%;
+      min-width: 300px;
+      margin-bottom: 64px;
+    }
+    .product-item > section:not(:last-child){
+      margin-bottom: 16px;
+    }
+    .product__stamp{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 30%;
+      top: 100px;
+      animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .upper{
+      text-align: left;
+      line-height: 1.2;
+    }
+    .cart{
+      text-decoration: none;
+      color: #023A6B;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .product-item img{
+      width: 264px;
+      height: 220px;
+    }
+    .product-item h3{
+      text-align: left;
+      font-size: 40px;
+      color: #023A6B;
+      display: flex;
+      margin-right: 10px;
+      font-family: 'Eczar', serif;
+    }
+   .price{
+    font-family: 'Eczar', serif;
+    background: darkorange;
+    color: white;
+    border-radius: 16px;
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+   }
+   .container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+   }
+   .amount{
+    text-align: left;
+    font-size: 20px;
+    color: #023A6B;
+    margin-top: -60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+   }
+  
+   .button{
+    padding: 16px 24px;
+    border: 2px solid yellow;
+    border-radius: 64px;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: inherit;
+    transition: all .2s;
+   }
+
+   .button:hover{
+    background: yellow;
+   }
+
+   input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border: 6px solid white;
+    border-radius: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   input[type="radio"]::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: darkorange;
+    margin-top: 3px;
+    margin-bottom: 3px;
+   }
+
+   input[type="radio"]:checked:before{
+    transform: scale(1);
+   }
+
+   
+   input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    margin-left: -1px;
+
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-color: white;
+    vertical-align: middle;
+   }
+
+   input[type="checkbox"]:checked {
+    background-color: yellow;
+   }
+
+   input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+   }
+
+
+
+
+
+   .sugar{
+    text-align: left;
+    color: #023A6B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+   }
+   .pill-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-style: double;
+    border-color: #FFBD5C;
+    border-radius: 25px;
+    background-color: #FEF2E8;
+    color: #023A6B;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .pill-button:hover {
+    transition: 400ms;
+    background-color: #FFBD5C
+  }
+  
+  .pill-button:focus {
+    outline: none;
+  }
+  .addtocart{
+    text-align: left;
+    padding-top: 10px;
+    display: flex;
+    }
+
+    .info {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../pictures/Info.png");
+      background-size: cover;
+      cursor: pointer;
+      transition: all .2s;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+
+    .info:hover {
+      width: 24px;
+      height: 24px;
+      margin-top: 13px;
+      margin-left: 13px;
+    }
+
+  
+
+
+
+
+    @media screen and (max-width:480px) {
+      .product-list {
+          grid-template-columns: 1fr;
+        }
+        .product-item {
+          flex-basis: 100%;
+        }
+        .navbar{
+          padding-bottom: 20px;
+        }
+        .upper{
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        .upper h1{
+          font-size: 30px;
+        }
+        .mainbody{
+          padding-left: 30px;
+          padding-right: 70px;
+          margin-left: -20px;
+        }
+        .brand{
+          width: 60%;
+        }
+        .cart{
+          width: 50%;
+          margin-left: -80px;
+          margin-right: -80px;
+        }
+        .icon{
+          width: 50%;
+          margin-right: -20px;
+        }
+        .logo{
+          width: 20%;
+          height: 20%;
+          margin-left: -10px;
+        }
+        .container h3{
+          font-size: 30px;
+        }
+        .container{
+          padding-bottom: 30px;
+        }
+        .product-item img{
+          height: 100%;
+        }
+    }
